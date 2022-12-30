@@ -14,7 +14,7 @@ Using Cygwin, we can install SimpleScalar as follows:
 
 ![Step 3](/Images/image001.png?raw=true "Step 3")
 
-4.Open Cygwin Terminal and change directory to the “Project” folder
+4. Open Cygwin Terminal and change directory to the “Project” folder
 
 ![Step 4](/Images/image003.png?raw=true "Step 4")
 
@@ -24,7 +24,7 @@ Using Cygwin, we can install SimpleScalar as follows:
 
 All these files will be extracted to a folder called simplesim-3.0 <br>
 
-6.Change the directory to simplesim-3.0
+6. Change the directory to simplesim-3.0
 
 ![Step 6](/Images/image007.png?raw=true "Step 6")
 
