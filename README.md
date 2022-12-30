@@ -64,16 +64,16 @@ The installation guide does warn us that we might get an error, but I was unable
 Simple Scalar and Alpha Configuration Modification to make Simple Scalar work for the Alpha Configuration <br>
 1. Edit target-alpha/alpha.h 
 2. Go to the line that has "extern enum md_opcode md_mask2op[]". 
-![Step 14](/Images/image001a.png?raw=true "Step 14")
+![Step 14](/Images/image001a.gif?raw=true "Step 14")
 
 3. Move that underneath the definition of "enum md_opcode {...}"  <br>
-![Step 15](/Images/image002a.png?raw=true "Step 15")
+![Step 15](/Images/image002a.gif?raw=true "Step 15")
 
 4. Re-try the make command. There might still be lots of warnings, but no actual errors, so the compilation should be successful. <br>
 This Solution Worked in my Ubuntu installed on VM!! <br>
 I tried executing one of the alpha benchmarks and it worked! <br>
-![Step 16](/Images/image003a.png?raw=true "Step 16")
-![Step 17](/Images/image004a.png?raw=true "Step 17")
+![Step 16](/Images/image003a.gif?raw=true "Step 16")
+![Step 17](/Images/image004a.gif?raw=true "Step 17")
 
 Unfortunately Cygwin doesn’t allow us to execute sudo commands. <br>
 ![Step 18](/Images/image027.png?raw=true "Step 18")
