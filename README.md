@@ -95,6 +95,9 @@ Just run the following commands in the simplesim-3.0 directory: <br>
 3. make <br>
 The lab experiments I performed were implemented on the PISA configured simulator. <br>
 
+Lab Experiments were then performed as instructed on the umass website [http://www.ecs.umass.edu/ece/koren/architecture/Simplescalar/]. <br>
+
+Outputs and Configuration files can be found in the LAB directory. <br>
 
 **Sources:** <br>
 - http://www.ecs.umass.edu/ece/koren/architecture/Simplescalar/
