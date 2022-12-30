@@ -1,0 +1,109 @@
+sim-cache: SimpleScalar/PISA Tool Set version 3.0 of August, 2003.
+Copyright (c) 1994-2003 by Todd M. Austin, Ph.D. and SimpleScalar, LLC.
+All Rights Reserved. This version of SimpleScalar is licensed for academic
+non-commercial use.  No portion of this work may be used by any commercial
+entity, or for any commercial purpose, without the prior written permission
+of SimpleScalar, LLC (info@simplescalar.com).
+
+sim: command line: /home/anuragb/CA_Lab/simplesim-3.0/sim-cache -config split_cache.cfg -redir:sim splitcache.out ./test-math 
+
+sim: simulation started @ Sun Nov 20 21:18:07 2022, options follow:
+
+sim-cache: This simulator implements a functional cache simulator.  Cache
+statistics are generated for a user-selected cache and TLB configuration,
+which may include up to two levels of instruction and data cache (with any
+levels unified), and one level of instruction and data TLBs.  No timing
+information is generated.
+
+# -config                     # load configuration from a file
+# -dumpconfig                 # dump configuration to a file
+# -h                    false # print help message    
+# -v                    false # verbose operation     
+# -d                    false # enable debug message  
+# -i                    false # start in Dlite debugger
+-seed                       1 # random number generator seed (0 for timer seed)
+# -q                    false # initialize and terminate immediately
+# -chkpt               <null> # restore EIO trace execution from <fname>
+# -redir:sim     splitcache.out # redirect simulator output to file (non-interactive only)
+# -redir:prog          <null> # redirect simulated program output to file
+-nice                       0 # simulator scheduling priority
+-max:inst                   0 # maximum number of inst's to execute
+-cache:dl1       d11:1024:16:4:l # l1 data cache config, i.e., {<config>|none}
+-cache:dl2               none # l2 data cache config, i.e., {<config>|none}
+-cache:il1       i11:1024:16:4:l # l1 inst cache config, i.e., {<config>|dl1|dl2|none}
+-cache:il2               none # l2 instruction cache config, i.e., {<config>|dl2|none}
+-tlb:itlb                none # instruction TLB config, i.e., {<config>|none}
+-tlb:dtlb                none # data TLB config, i.e., {<config>|none}
+-flush                  false # flush caches on system calls
+-cache:icompress        false # convert 64-bit inst addresses to 32-bit inst equivalents
+# -pcstat              <null> # profile stat(s) against text addr's (mult uses ok)
+
+  The cache config parameter <config> has the following format:
+
+    <name>:<nsets>:<bsize>:<assoc>:<repl>
+
+    <name>   - name of the cache being defined
+    <nsets>  - number of sets in the cache
+    <bsize>  - block size of the cache
+    <assoc>  - associativity of the cache
+    <repl>   - block replacement strategy, 'l'-LRU, 'f'-FIFO, 'r'-random
+
+    Examples:   -cache:dl1 dl1:4096:32:1:l
+                -dtlb dtlb:128:4096:32:r
+
+  Cache levels can be unified by pointing a level of the instruction cache
+  hierarchy at the data cache hiearchy using the "dl1" and "dl2" cache
+  configuration arguments.  Most sensible combinations are supported, e.g.,
+
+    A unified l2 cache (il2 is pointed at dl2):
+      -cache:il1 il1:128:64:1:l -cache:il2 dl2
+      -cache:dl1 dl1:256:32:1:l -cache:dl2 ul2:1024:64:2:l
+
+    Or, a fully unified cache hierarchy (il1 pointed at dl1):
+      -cache:il1 dl1
+      -cache:dl1 ul1:256:32:1:l -cache:dl2 ul2:1024:64:2:l
+
+
+
+sim: ** starting functional simulation w/ caches **
+
+sim: ** simulation statistics **
+sim_num_insn                 213598 # total number of instructions executed
+sim_num_refs                  56890 # total number of loads and stores executed
+sim_elapsed_time                  1 # total simulation time in seconds
+sim_inst_rate           213598.0000 # simulation speed (in insts/sec)
+i11.accesses                 213598 # total number of accesses
+i11.hits                     210568 # total number of hits
+i11.misses                     3030 # total number of misses
+i11.replacements                 76 # total number of replacements
+i11.writebacks                    0 # total number of writebacks
+i11.invalidations                 0 # total number of invalidations
+i11.miss_rate                0.0142 # miss rate (i.e., misses/ref)
+i11.repl_rate                0.0004 # replacement rate (i.e., repls/ref)
+i11.wb_rate                  0.0000 # writeback rate (i.e., wrbks/ref)
+i11.inv_rate                 0.0000 # invalidation rate (i.e., invs/ref)
+d11.accesses                  57471 # total number of accesses
+d11.hits                      56459 # total number of hits
+d11.misses                     1012 # total number of misses
+d11.replacements                  0 # total number of replacements
+d11.writebacks                    0 # total number of writebacks
+d11.invalidations                 0 # total number of invalidations
+d11.miss_rate                0.0176 # miss rate (i.e., misses/ref)
+d11.repl_rate                0.0000 # replacement rate (i.e., repls/ref)
+d11.wb_rate                  0.0000 # writeback rate (i.e., wrbks/ref)
+d11.inv_rate                 0.0000 # invalidation rate (i.e., invs/ref)
+ld_text_base             0x00400000 # program text (code) segment base
+ld_text_size                  91744 # program text (code) size in bytes
+ld_data_base             0x10000000 # program initialized data segment base
+ld_data_size                  13028 # program init'ed `.data' and uninit'ed `.bss' size in bytes
+ld_stack_base            0x7fffc000 # program stack segment base (highest address in stack)
+ld_stack_size                 16384 # program initial stack size
+ld_prog_entry            0x00400140 # program entry point (initial PC)
+ld_environ_base          0x7fff8000 # program environment base address address
+ld_target_big_endian              0 # target executable endian-ness, non-zero if big endian
+mem.page_count                   33 # total number of pages allocated
+mem.page_mem                   132k # total size of memory pages allocated
+mem.ptab_misses                  34 # total first level page table misses
+mem.ptab_accesses           1547297 # total page table accesses
+mem.ptab_miss_rate           0.0000 # first level page table miss rate
+
