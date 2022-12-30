@@ -83,11 +83,14 @@ Then, downloaded and installed simplescalar on it, like the process detailed abo
 ![Step 19](/Images/image029.png?raw=true "Step 19")
 ![Step 20](/Images/image031.png?raw=true "Step 20")
 ![Step 21](/Images/image033.png?raw=true "Step 21")
-![Step 22](/Images/image035.png?raw=true "Step 22")
+![Step 22](/Images/image035.png?raw=true "Step 22") <br>
 
-
-
-
+Similarly, we can configure the simulator for PISA - configuration as well. <br>
+Just run the following commands in the simplesim-3.0 directory: <br>
+1. make clean
+2. make config-pisa
+3. make
+The lab experiments I performed were implemented on the PISA configured simulator. <br>
 
 
 **Sources:** <br>
