@@ -3,7 +3,8 @@ SimpleScalar Lab Assignments <br>
 
 ## Installation Procedure:
 **I used VMWare Virtual Machine, I start off with cygwin (all this can be done using cygwin as well, but I preferred to do it on a linux system** <br>
-**Linux Ubuntu version:** 22.04.1 <br><br>
+**Linux Ubuntu version:** 22.04.1 <br>
+**Other relevant specifications:** gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) <br>
 
 I am working on a Windows system, and the installation guide uses Linux commands to install SimpleScalar. So as a workaround, I installed Cygwin [Under Cygwin, source code designed for Unix-like operating systems may be compiled with minimal modification and executed.]. Alternatively, I also installed VMWare Workstation which enables us to install Ubuntu-Linux on it. [Ultimately, I end up working on this.]
 Using Cygwin, we can install SimpleScalar as follows:
