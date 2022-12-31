@@ -8,7 +8,7 @@ SimpleScalar is a product of SimpleScalar, LLC that allows you to try out new co
 
 I am working on a Windows system, and the installation guide uses Linux commands to install SimpleScalar. So as a workaround, I installed Cygwin [Under Cygwin, source code designed for Unix-like operating systems may be compiled with minimal modification and executed.]. Alternatively, I also installed VMWare Workstation which enables us to install Ubuntu-Linux on it. [Ultimately, I end up working on this.]
 Using Cygwin, we can install SimpleScalar as follows:
-1. Go to This document is a guide for installing SimpleScalar on a Linux system (umass.edu) [http://www.ecs.umass.edu/ece/koren/architecture/Simplescalar/installingSimpleScalar.htm]
+1. Go to the website link given below. There are various links on the page, one of which is a guide for installing SimpleScalar on a Linux system (umass.edu) [http://www.ecs.umass.edu/ece/koren/architecture/Simplescalar/installingSimpleScalar.htm]
 2. Download simplesim-3v0d.tgz
 3. Make a folder where you want to Install SimpleScalar. So I made a folder called “Project” and copied the downloaded .tgz file in here.
 
@@ -18,7 +18,7 @@ Using Cygwin, we can install SimpleScalar as follows:
 
 ![Step 4](/Images/image003.png?raw=true "Step 4")
 
-5. Un-tar the downloaded file using command  tar xzvf simplesim-3v0d.tgz
+5. Un-tar the downloaded file using command: tar xzvf simplesim-3v0d.tgz
 
 ![Step 5](/Images/image005.png?raw=true "Step 5")
 
@@ -28,7 +28,7 @@ All these files will be extracted to a folder called simplesim-3.0 <br>
 
 ![Step 6](/Images/image007.png?raw=true "Step 6")
 
-7. Run the command: make config-pisa
+7. We try to configure it as a PISA simulator first. Run the command: make config-pisa
 
 ![Step 7](/Images/image009.png?raw=true "Step 7")
 
@@ -41,7 +41,7 @@ We should see “my work is done here…” on the last line on the Cygwin Termi
 
 ![Step 8-ii](/Images/image013.png?raw=true "Step 8-ii")
 
-9. Now we can test if simplesim was installed or not by executing  ./sim-cache tests-pisa/bin/test-math
+9. Now we can test if simplesim was installed or not by executing: ./sim-cache tests-pisa/bin/test-math
 
 ![Step 9](/Images/image015.png?raw=true "Step 9")
 ![Step 9-ii](/Images/image017.png?raw=true "Step 9-ii")
@@ -63,8 +63,8 @@ make [This is where we run into an error] <br>
 ERROR: [as seen on the last line after executing “make”] <br>
 ![Step 13](/Images/image025.png?raw=true "Step 13")
 
-The installation guide does warn us that we might get an error, but I was unable to resolve this issue, until a **fix to resolve Alpha config issue** was later found. <br>
-Simple Scalar and Alpha Configuration Modification to make Simple Scalar work for the Alpha Configuration <br>
+The installation guide does warn us that we might get an error, but I was unable to resolve this issue, until a **fix to resolve Alpha config issue** was later found. <br><br>
+**Simple Scalar and Alpha Configuration Modification to make Simple Scalar work for the Alpha Configuration:** <br>
 1. Edit target-alpha/alpha.h 
 2. Go to the line that has "extern enum md_opcode md_mask2op[]". 
 ![Step 14](/Images/image001a.gif?raw=true "Step 14")
@@ -92,7 +92,8 @@ Similarly, we can configure the simulator for PISA - configuration as well. <br>
 Just run the following commands in the simplesim-3.0 directory: <br>
 1. make clean
 2. make config-pisa
-3. make <br>
+3. make
+
 The lab experiments I performed were implemented on the PISA configured simulator. <br>
 
 Lab Experiments were then performed as instructed on the umass website [http://www.ecs.umass.edu/ece/koren/architecture/Simplescalar/]. <br>
