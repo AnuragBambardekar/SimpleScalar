@@ -63,7 +63,7 @@ make [This is where we run into an error] <br>
 ERROR: [as seen on the last line after executing “make”] <br>
 ![Step 13](/Images/image025.png?raw=true "Step 13")
 
-The installation guide does warn us that we might get an error, but I was unable to resolve this issue, until a **fix to resolve Alpha config issue** was later provided. <br>
+The installation guide does warn us that we might get an error, but I was unable to resolve this issue, until a **fix to resolve Alpha config issue** was later found. <br>
 Simple Scalar and Alpha Configuration Modification to make Simple Scalar work for the Alpha Configuration <br>
 1. Edit target-alpha/alpha.h 
 2. Go to the line that has "extern enum md_opcode md_mask2op[]". 
