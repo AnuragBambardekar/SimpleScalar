@@ -1,5 +1,5 @@
 # SimpleScalar
-SimpleScalar Lab Assignments <br>
+SimpleScalar is a product of SimpleScalar, LLC that allows you to try out new computer architecture ideas. It consists of a simulator and a GNU gcc-based toolchain. <br>
 
 ## Installation Procedure:
 **I used VMWare Virtual Machine, I attempt installation with cygwin (all this can be done using cygwin as well, but later I preferred to install and perform the assignments on a linux system [VMWare Virtual Machine]** <br>
