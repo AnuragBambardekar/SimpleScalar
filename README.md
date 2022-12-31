@@ -2,7 +2,7 @@
 SimpleScalar Lab Assignments <br>
 
 ## Installation Procedure:
-**I used VMWare Virtual Machine, I start off with cygwin (all this can be done using cygwin as well, but I preferred to do it on a linux system** <br>
+**I used VMWare Virtual Machine, I attempt installation with cygwin (all this can be done using cygwin as well, but later I preferred to install and perform the assignments on a linux system [VMWare Virtual Machine]** <br>
 **Linux Ubuntu version:** 22.04.1 <br>
 **Other relevant specifications:** gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) <br>
 
